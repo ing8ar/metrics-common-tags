@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: test
+metrics:
+  common:
+    tags:
+      - app
+      - host
+      - custom-tag
+      - unknown-tag
