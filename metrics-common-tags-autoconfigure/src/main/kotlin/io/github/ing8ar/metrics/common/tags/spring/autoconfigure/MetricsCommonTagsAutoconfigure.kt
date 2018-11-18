@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 /**
- * [Auto-configuration][EnableAutoConfiguration] for set metrics common tags
+ * Auto-configuration for set metrics common tags
  * @property metricsCommonTagsProperties - properties with common tag names
  * @property tagExtractors - set of [tag extractor][TagExtractor] beans
  */

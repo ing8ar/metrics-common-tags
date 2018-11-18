@@ -12,10 +12,10 @@ dependencyManagement.imports {
 }
 
 dependencies {
-    implementation(project(":metrics-common-tags-core"))
-    implementation(kotlin("stdlib-jdk8"))
+    api(kotlin("stdlib-jdk8"))
 
-    implementation("org.springframework.boot:spring-boot")
+    implementation("io.github.ing8ar.metrics-common-tags:metrics-common-tags-core:0.1.0")
+
     implementation("org.springframework.boot:spring-boot-autoconfigure")
     implementation("org.springframework.boot:spring-boot-actuator-autoconfigure")
     implementation("io.micrometer:micrometer-core")

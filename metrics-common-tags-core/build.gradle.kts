@@ -6,14 +6,15 @@ dependencies {
     val mockkVersion = "1.8.9"
     val assertjVersion = "3.11.1"
 
-    implementation(kotlin("stdlib-jdk8"))
-    implementation(kotlin("reflect"))
+    api(kotlin("stdlib-jdk8"))
+    api(kotlin("reflect"))
+
     implementation("io.github.microutils:kotlin-logging:$kloggingVersion")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:$junit5Version")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:$junit5Version")
-    testImplementation("io.mockk:mockk:$mockkVersion")
-    testImplementation("org.assertj:assertj-core:$assertjVersion")
+    testApi("org.junit.jupiter:junit-jupiter-api:$junit5Version")
+    testApi("org.junit.jupiter:junit-jupiter-params:$junit5Version")
+    testApi("io.mockk:mockk:$mockkVersion")
+    testApi("org.assertj:assertj-core:$assertjVersion")
 
-    testRuntime("org.junit.jupiter:junit-jupiter-engine:$junit5Version")
+    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junit5Version")
 }
