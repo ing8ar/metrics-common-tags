@@ -5,6 +5,7 @@ plugins {
 
     id("io.spring.dependency-management") version springDependencyManagementVersion
 }
+version = "0.1.1"
 
 dependencyManagement.imports {
     val springBootVersion = "2.1.0.RELEASE"

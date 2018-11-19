@@ -8,6 +8,8 @@ import io.micrometer.core.instrument.Clock
 import io.micrometer.core.instrument.MeterRegistry
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryCustomizer
+import org.springframework.boot.actuate.autoconfigure.metrics.MetricsAutoConfiguration
+import org.springframework.boot.autoconfigure.AutoConfigureAfter
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty
@@ -21,10 +23,11 @@ import org.springframework.context.annotation.Configuration
  * @property tagExtractors - set of [tag extractor][TagExtractor] beans
  */
 @Configuration
+@AutoConfigureAfter(MetricsAutoConfiguration::class)
 @ConditionalOnBean(Clock::class)
 @ConditionalOnProperty(prefix = "metrics.common", name = ["tags"], matchIfMissing = true)
 @EnableConfigurationProperties(MetricsCommonTagsProperties::class)
-open class MetricsCommonTagsAutoconfigure(
+open class MetricsCommonTagsAutoConfiguration(
     private val metricsCommonTagsProperties: MetricsCommonTagsProperties,
     private val tagExtractors: Set<TagExtractor>
 ) {

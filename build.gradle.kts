@@ -15,7 +15,6 @@ plugins {
 
 allprojects {
     group = "io.github.ing8ar.metrics-common-tags"
-    version = "0.1.0"
 
     repositories {
         mavenCentral()
@@ -78,6 +77,7 @@ subprojects {
                         }
                         withGroovyBuilder {
                             "repository"("url" to uri("https://oss.sonatype.org/service/local/staging/deploy/maven2/")) {
+                                //                            "repository"("url" to uri("/Users/ing8ar/develop/java/metrics-common-tags/m2/")) {
                                 "authentication"(
                                     "userName" to project.properties["ossrhUsername"],
                                     "password" to project.properties["ossrhPassword"]

@@ -1,9 +1,11 @@
 # Metrics Common Tags
-Micro-util for adding common tags to sending metrics (spring boot actuator).
+Micro-util for adding common tags to spring boot metrics (spring boot actuator).
+
+Similarly, but not the same feature (since Spring Boot 2.1.0) - management.metrics.tags.*, because it helps to extract some non constant data.
 ## Getting Started
 #### 1. Add dependency to build file (build.gradle.kts)
 ```
-implementation("io.github.ing8ar.metrics-common-tags:metrics-common-tags-autoconfigure:0.1.0")
+implementation("io.github.ing8ar.metrics-common-tags:metrics-common-tags-autoconfigure:0.1.1")
 ```
 #### 2. Add properties to your spring boot application.yml
 ```yaml

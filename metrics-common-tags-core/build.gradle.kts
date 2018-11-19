@@ -1,5 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+version = "0.1.0"
+
 dependencies {
     val kloggingVersion = "1.6.20"
     val junit5Version = "5.3.1"
